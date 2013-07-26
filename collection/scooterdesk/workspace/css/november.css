@@ -1,0 +1,722 @@
+/******* Structure *******/
+
+/*
+1 76% is smallest value for unified result across browsers. font sizing in ems
+2 set dummy bg to replace the n4_upgrade.gifin n4.css
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font: 76% helvetica, arial, sans-serif;
+	color: #000;
+	background:#fff url(../img/beta.gif) no-repeat top right;
+	}
+
+#container {
+	margin:0 auto;
+	width:820px;
+	}
+
+#content {
+	float:right;
+	width:510px;
+	}
+
+#navigation {
+	float:left;
+	width:300px;
+	}
+
+#colophon {
+	clear:both;
+	width:100%;
+	border-top:10px solid #ccc;
+	}
+
+#footer {
+	background:#000;
+	color:#fff;
+	}
+
+#footer p {
+	margin:0;padding:5px 10px
+	}
+
+
+/******* Masthead and its navigation *******/
+
+/*
+0 push all down to give header some room
+1 pull it flush against top (header top margin=header dl top)
+2 bring it above the tabs, and make it cover the awaiting dd's
+3 text replacement
+*/
+
+#header  {
+	height: 150px;
+	margin-top: 15px;
+	}
+
+#header h1 {
+	position:relative;
+	top:0;
+	left:0;
+	margin:0;
+
+	background:#fff url(../img/utilia.gif) no-repeat 0 0;
+	z-index: 1;
+	width:611px;
+	
+	height:28px;
+	text-indent:-3000px;
+	overflow:hidden;
+	}
+
+/*styling of tagline with border at top*/
+
+#header h2 {
+	border-top: 2px solid #000;
+	margin:2px 0 0 0;
+	padding:3px 0 0 0;
+	font-size: 1.1em;
+	font-weight: 500;
+	}
+
+/* 
+1 give all a maximum pxheight so the 'sensitive area' only starts above the line
+2 get rid of default dl margin
+3 pull all dl's over each other, at the top of the page, ready to be pushed down on hover
+*/
+
+#header dl {
+	height: 28px;
+	
+	margin: 0;
+	
+	position:absolute;
+	top:15px;
+	}
+
+/* 
+1 get rid of default dl padding
+2 pull the dt to the top right of its parent dl, also do this for the dt's parent: a, cause it doesnt inherit it by itselve
+3 define the tabheight  
+*/
+
+#header dl dt, #header dl dt a {
+	padding: 0;
+
+	position:absolute;
+	top:0px;
+	right:0;
+
+	height:27px;
+	}
+
+/* 
+1 get rid of default dl margin, so the dd will be full left
+2 same font as #header h2
+3 to cover up the h2 header, when the dd is pulled down, set bg color to white 
+*/
+
+#header dl dd {
+	margin: 0px;
+	font-size: 1.1em;
+	font-weight: 500;
+	background:#fff;
+	}
+
+/*
+give the dl's increasingly shorter lenght
+*/
+
+#header dl#collection{
+	width:820px;
+	}
+
+#header dl#studio{
+	width: 753px;
+	}
+
+#header dl#blog {
+	width: 671px;
+	}
+
+/* hide the dd's in the top*/
+
+#header dl {
+	padding-top:0px;
+	}
+
+/* show the dd's on hover on the full surface dl area*/
+
+#header dl:hover, #header dl.sfhover {
+	padding-top:35px;
+	}
+
+/*set the specified with of the tabs*/
+
+#header dl#collection dt  {
+	width:67px;
+	}
+
+#header dl#studio dt {
+	width:82px;
+	}
+
+#header dl#blog dt {
+	width:60px;
+	}
+
+/*stretch links to fill entire dt surface*/
+
+#header dl a {
+	display:block;
+	width:100%;
+	height:100%;
+	}
+
+/*set background properties tabs*/
+
+#header dl a {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	text-indent:-3000px;
+	}
+
+/*sliding bg on hover, for rollover effect*/
+
+#header dl a:hover{
+	background-position: 0 -27px;
+	}
+
+/*hide links in dt and replace with image of text*/
+
+#header dl#collection a {
+	background-image: url(../img/shop.gif);
+	}
+
+#header dl#studio a {
+	background-image: url(../img/studio.gif);
+	}
+
+#header dl#blog a {
+	background-image: url(../img/blog.gif);
+	}
+
+
+
+/******* Left Menu *******/
+		
+#navigation.entry {
+	width: 300px;
+	overflow: hidden;
+	border-bottom: 1px solid #222;
+	font: 0.93em "Avant Garde","Century Gothic", Helvetica, Arial, sans-serif;
+	}
+	
+/*
+1 push down and right
+2 make relative, to enable a to be absolute
+3 hidden overflow to crop image if text smaller, min height to have image always fully visible
+4 reset navigation dl margin
+5 auto heigth and min-heigth fed to IE as height; to expand
+*/
+
+#navigation.entry dl {
+	position: relative;
+	padding: 5px;
+	border-top: 1px solid #000;
+	overflow:hidden;
+	min-height: 57px;
+	margin:0;
+	height:auto;
+	}
+		
+#navigation.entry dl:hover, #navigation.entry dl.sfhover {
+	color: #fff;
+	background: #000;
+	}
+		
+/*
+1 make the link relative absolute, put in left top, and stretch full surface
+2 push linktext forward with indent, push down next to photo with padding
+*/
+
+#navigation.entry a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	text-decoration: none;
+	text-indent: 100px;
+	letter-spacing: 0.1em;
+	padding-top:5px;
+	color:#000;
+	text-transform: uppercase;
+	}
+
+/* IE only
+#navigation.entry a {
+	text-indent: 95px;
+	}
+*/
+
+#navigation.entry a:hover, #navigation.entry dl:hover a, #navigation.entry dl.sfhover a {
+	color: #fff;
+	}
+		
+/* push text right under image, and pull it up, and push a text dependant buffer under title */
+#navigation.entry dd {
+	margin-left: 95px;
+	margin-top:-51px;
+	padding-top:0.8em;
+	height:auto;
+	display:block;
+	}
+
+/* IE only min-height
+#navigation.entry dd {
+	height: 47px;
+	}
+*/
+		
+/* give the dt with image child a height, and overflow hidden to crop the square image*/
+	#navigation.entry dt.thumb {
+	height: 56px;
+	overflow:hidden;
+	}
+
+/* put the cropped image in the middle*/
+#navigation.entry dt.thumb img{
+	margin-top:-17px;
+	}
+
+
+
+
+
+/* archive 
+
+#navigation.date ul#year{
+	margin:0;
+	padding:0;
+	}
+
+#navigation.date ul#month{
+	margin:0;
+	padding:17px 0 0 0;
+	clear:both;
+	}
+
+#navigation.date li{
+	list-style:none;
+	}
+
+#navigation.date li a{
+	float: left;
+	display:block;
+	height:1.3em;
+	width:7.6em;
+	background:#000;
+	margin: 0 1px 1px 0 ;
+	padding:2px;
+	}
+
+#navigation.date a small {
+	float: right;
+	}
+
+#navigation.date a {
+	color: #fff;
+	text-decoration:none;
+	}
+
+#navigation.date ul#year a {
+	text-align:center;
+	}
+
+#navigation.date a.active, #navigation.date a:hover {
+	color: #000;
+	background-color: #fff;
+	padding:1px;
+	border: 1px solid #000;
+	}
+*/
+
+/******* Image Gallery Block  77 4dec *******/
+
+/***
+header within imagegallerydiv classed 'pic' 
+utilia.be/blog/something, and something has no category 'publication' > permalinkpage with blog-article(with picgallery) 
+utilia.be/static/ or utilia.be/static/something > static(shop, studio) frontpage and permalink articles always have a gallery 
+.pic
+***/
+
+/* padding to center all, width for IE*/
+#imagegallery.pic {
+	background:#000;
+	padding:5px;
+	width:500px;
+
+	}
+
+/* style the initial image size 90px x 90px no border and 5pixel padding */
+#imagegallery.pic a img {
+	width:90px;
+	height:90px;
+	border:0;
+	padding:5px;
+	}
+
+/* style the parent link exactly the same, and float it (overflow hidden default state for IE) */
+#imagegallery.pic a  {
+	float:right;
+	width:100px;
+	height:100px;
+	overflow:hidden;
+	}
+
+/* style position of the links on hover */
+#imagegallery.pic a:hover {
+	position:relative;
+	overflow:visible;
+	}
+
+/* style the 2x size image on hover with an absolute position to place it centrally over the original image (90-140:2), z-index safari-fix */
+#imagegallery.pic a:hover img {
+	position:absolute;
+	width:130px;
+	height:130px;
+	left:-25px;
+	top:-25px;
+	padding:10px;
+	background:#000;
+	z-index:1;
+	}
+
+/** exempt/neutralize first image, classed 'first', from styling above (not enlarging) **/
+#imagegallery.pic a.first  {
+	width:auto;
+	height:auto;
+	}
+
+#imagegallery.pic a.first img {
+	width:auto;
+	height:auto;
+        padding:0;
+	margin:5px 5px 5px 0;
+	}
+
+#imagegallery.pic a.first:hover img {
+	position:relative;
+	width:auto;
+	height:auto;
+	left:0;
+	top:0;
+	padding:0;
+	}
+
+#imagegallery.pic h2{
+	font: 100 2em "Avant Garde","Century Gothic", Helvetica, Arial, sans-serif;
+	color: #fff;
+	text-align: right;
+	margin: 0 6px 0 0;
+	clear:both;
+	}
+
+/*** 
+header outside imagegallerydiv classed 'intro'
+utilia.be/blog/ > frontpage article, either a publication-article-intro (linked to pubgallery) or blog-article-intro (linking to picgallery)
+.intro
+***/
+
+
+#content h2{
+	font: 100 2em "Avant Garde","Century Gothic", Helvetica, Arial, sans-serif;
+	margin: 0;
+	}
+
+#content h2 a{
+	color:#000;
+	text-decoration:none;
+	}
+
+#content h2 a:hover{
+	color:#fff;
+	background:#000;
+	text-decoration:none;
+	}
+
+
+
+#imagegallery.intro img {
+	float:right;
+	margin:0 0 10px 10px;
+	}
+
+/***
+header outside imagegallerydiv classed 'pub' 
+utilia.be/blog/something, and something has category 'publication' > permalinkpage with publication-article(with pubgallery)
+.pub
+***/
+
+
+/* 
+give the floated img tag a height by wrapping it in a (semi semantic) wrapper div (or even a link?)
+the next div NEEDS a clear:both and cannot be a float ??*/
+
+/* exception: 2nd image in pressclipping, classed in imggalleryutility previous a.page */
+
+#imagegallery.pub a#fullsize.second{
+width:808px;
+height:1150px;
+padding:5px;
+border: 1px solid #000;
+margin-left:-350px;
+float:right;
+overflow:hidden;
+}
+
+#imagegallery.pub a.first{
+float:right;
+}
+
+#imagegallery.pub a, #imagegallery.pub em{
+	float:left;
+	padding:3px 3px 3px 0;
+	color:#000;
+	}
+
+#imagegallery.pub a:hover {
+	color: #fff;
+	background:#000;
+	}
+
+#imagegallery.pub a.first img{
+	margin:0 0 10px 10px;
+	}
+
+
+/******* Product Labels *******/
+
+#content dl.right {
+	margin-left: 6px;
+	}
+
+/*
+set height in em, to have a text scaling height, independant of content, set stripes at top of dt, bottom width div
+do not specify margin left (shorthand) cause it resets the .right class. just space separate the values in xhtml class
+*/
+#content dl.label {
+	border: solid #000;
+	border-width:0 1px 1px 1px;
+	margin-top:10px;
+	margin-bottom:10px;
+	width:250px;
+	height:18em;
+	float:left;
+	font: 0.93em helvetica, arial, sans-serif;
+	}
+
+#content dl.label dt{
+	width: 60px;
+	height:3em;
+	float: left;
+	border-top: 1px solid #000;
+	text-indent:-1000em;
+	background-position: 50% 4px;
+	background-repeat: no-repeat;
+	}
+
+/* width, float and margin optional (if margin-left: 60px), to please IE */
+#content dl.label dd {
+	padding: 2px ;
+	min-height:3em;
+	border-top: 1px solid #000;
+	line-height: 1.2em;
+	height:auto;
+
+	width:186px;
+	float: left;
+	margin: 0;
+	}
+
+/* IE only 
+#content dl.label dd {
+	height:3em;
+	}
+*/
+
+#content dl.label dt.box {
+	background-image: url(../img/box.gif);
+
+	}
+#content dl.label dt.fly {
+	background-image: url(../img/fly.gif);
+
+	}
+#content dl.label dt.key {
+	background-image: url(../img/key.gif);
+
+	}
+#content dl.label dt.rec {
+	background-image: url(../img/rec.gif);
+	}	
+#content dl.label dt.fac {
+	background-image: url(../img/factory.gif);
+
+	}		
+#content dl.label dt.visa {
+	background-image: url(../img/visa.gif);
+	
+	}
+#content dl.label dt.weight {
+	background-image: url(../img/weight.gif);
+
+	}		
+#content dl.label dt.size {
+	background-image: url(../img/size.gif);
+	}
+
+#content dl.label dt.flower {
+	background-image: url(../img/flower.gif);
+	}
+	
+/******* Articles *******/
+
+p{margin: 10px 0}
+
+
+#content p {
+	line-height:1.4
+	}
+
+#content p.article-footer {
+	background:#000;
+	color: #fff;
+	padding:3px 10px;
+	text-align: right;
+	font: 0.9em "Avant Garde","Century Gothic", Helvetica, Arial, sans-serif;
+	margin-bottom:50px;
+	clear:both;
+	}
+
+#content p.article-footer em {
+	float:left;
+	}
+#content p.more-info a {
+	padding:0;
+	text-transform: uppercase;
+	font: 0.9em "Avant Garde","Century Gothic", Helvetica, Arial, sans-serif;
+	color:#000;
+	
+	}
+#content p.more-info a:hover{
+	color: #fff;
+	background:#000;
+	}
+
+/* 
+give the floated img tag a height by wrapping it in a (semi semantic) wrapper div (or even a link?)
+the next div NEEDS a clear:both and cannot be a float ??
+
+
+
+#content img {
+	float:right;
+	margin-bottom:5px;
+	}
+
+*/
+
+.article-body p {
+	xwidth:300px;
+	}
+
+/* margin:optional to please IE */
+#content p.article-price  {
+	padding:3px 8px;
+	clear:both;
+	text-align: right;
+	border: 2px solid #000;
+	font-size: 2.0em;
+
+	margin: 0 0 10px 0;
+	}
+
+#content p.article-price em {
+	float:left;
+	font-size: 0.7em;
+	
+	}
+
+
+
+
+/******* Forms *******/
+
+form {
+	background:#ccc;
+	padding:5px;
+	margin-bottom:10px;
+	height:190px;
+	}
+
+fieldset {
+	border: none;
+	padding: 0;
+	}
+
+/*block to allow margin*/
+form label {
+	display: block;
+	font: 0.9em "Avant Garde","Century Gothic", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	margin: 0 0 10px 0;
+	}
+
+form label.message {
+	float:right;
+	margin-top:-1px;
+	}
+
+/*block pushes the label on top of the field*/
+form input {
+	display: block;
+	width: 300px;
+	}
+
+form textarea {
+	height: 140px;
+	display: block;
+	width: 480px;
+	}
+
+form input#submit {
+	float: right;
+	width: auto;
+	clear:both;
+	}
+
+form p.success {
+	color: #6cc33c;
+	background: #e2e4db url("../img/icon-tick.gif") left center no-repeat;
+	font-size: 99%;
+	margin: 0 0 9px;
+	padding-left: 24px;
+	}
+
+form p.error {
+	color: #ff4242;
+	background: #e2e4db url("../img/icon-cross.gif") left center no-repeat;
+	font-size: 99%;
+	margin: 0 0 9px;
+	padding-left: 24px;
+	}
+
+address {
+	margin-bottom:15px;
+	}

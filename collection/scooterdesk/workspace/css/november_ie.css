@@ -1,0 +1,21 @@
+/******* Left Menu *******/
+	
+
+#navigation.entry a {
+	text-indent: 95px;
+
+	}
+
+#navigation.entry dd {
+	height: 47px;
+   
+	}
+	
+/******* Product Labels *******/
+
+
+#content dl.label dd {
+	height:3em;
+	}
+
+
