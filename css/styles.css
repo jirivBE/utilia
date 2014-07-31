@@ -1,0 +1,147 @@
+body {
+	margin: 0;
+	font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
+	color: black;
+	text-align: left;
+	}
+
+div#wrapper {
+	margin: 45px;
+	margin-top: 60px;
+	max-width: 1224px;
+	min-width: 780px;
+	}
+
+hgroup.in {
+	display: inline;
+}
+
+h1, h2 {
+	font-weight: bold;
+	display: inline;
+	}
+
+h1 a, h2 a, li a {
+	font-weight: bold;
+	text-decoration: none;
+	cursor: pointer;
+	}
+
+h1 a, h2 a {
+	color: #ffffff;
+	}
+
+hgroup.in a:hover, li a:hover {
+	background-color: #FFFFFF;
+	border-bottom: 3px solid;
+}
+
+hgroup, hgroup a:hover {
+	color: #000000;
+	}
+
+hgroup a {
+	background-color: #000000;
+}
+
+hgroup.one, hgroup.one a:hover {
+	color: #FF5B54;
+	}
+
+hgroup.one a {
+	background-color: #FF5B54;
+}
+
+hgroup.two, hgroup.two a:hover {
+	color: #8A4E77;
+	}
+
+hgroup.two a {
+	background-color: #8A4E77;
+}
+
+hgroup.three, hgroup.three a:hover {
+	color: #36779D;
+	}
+
+hgroup.three a {
+	background-color: #36779D;
+	}
+
+hgroup.four, hgroup.four a:hover {
+	color: #56B2BD;
+	}
+
+hgroup.four a {
+	background-color: #56B2BD;
+	}
+
+hgroup.five, hgroup.five a:hover {
+	color: #6ABC8B;
+	}
+
+hgroup.five a {
+	background-color: #6ABC8B;
+	}
+
+
+
+footer  {
+	padding-top: 1em;
+	}
+
+footer li {
+	display: inline;
+	list-style-type: none;
+	font-weight: bold;
+	padding-right: 0.6em;
+	}
+
+footer li {
+	color: #DEDEDE;
+	}
+
+footer li a {
+	color: #DEDEDE;
+	border-color: #DEDEDE;
+	}
+
+/* iPad, tablets, phones etc. portrait ---- */
+@media only screen and (min-width: 320px) {
+	body {
+		font-size: 26px;
+		line-height: 34px;
+		}
+	}
+
+/* Laptops, Desktops, etc. jump point #3 ---- */
+@media only screen and (min-width: 950px) {
+	body {
+		font-size: 30px;
+		line-height: 38px;
+		}
+	}
+
+/* Laptops, Desktops, etc. jump point #2 ---- */
+@media only screen and (min-width: 1050px) {
+	body {
+		font-size: 34px;
+		line-height: 40px;
+		}
+	}
+
+/* Laptops, Desktops, etc. jump point #1 ---- */
+@media only screen and (min-width: 1165px) {
+	body {
+		font-size: 38px;
+		line-height: 45px;
+		}
+	}
+
+/* Laptops, Desktops, etc. default ---- */
+@media only screen and (min-width: 1275px) {
+	body {
+		font-size: 42px;
+		line-height: 50px;
+		}
+	}

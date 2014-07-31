@@ -10,7 +10,7 @@ body {
 	padding: 0;
 	font: 76% helvetica, arial, sans-serif;
 	color: #000;
-	background:#fff url(../img/beta.gif) no-repeat top right;
+	background:#fff url("http://utilia.be/collection/scooterdesk/workspace/img/beta.gif") no-repeat top right;
 	}
 
 #container {
@@ -64,7 +64,7 @@ body {
 	left:0;
 	margin:0;
 
-	background:#fff url(../img/utilia.gif) no-repeat 0 0;
+	background:#fff url("../img/utilia.gif") no-repeat 0 0;
 	z-index: 1;
 	width:611px;
 	
@@ -194,15 +194,15 @@ give the dl's increasingly shorter lenght
 /*hide links in dt and replace with image of text*/
 
 #header dl#collection a {
-	background-image: url(../img/shop.gif);
+	background-image: url("../img/shop.gif");
 	}
 
 #header dl#studio a {
-	background-image: url(../img/studio.gif);
+	background-image: url("../img/studio.gif");
 	}
 
 #header dl#blog a {
-	background-image: url(../img/blog.gif);
+	background-image: url("../img/blog.gif");
 	}
 
 
@@ -551,38 +551,38 @@ do not specify margin left (shorthand) cause it resets the .right class. just sp
 */
 
 #content dl.label dt.box {
-	background-image: url(../img/box.gif);
+	background-image: url("../img/box.gif");
 
 	}
 #content dl.label dt.fly {
-	background-image: url(../img/fly.gif);
+	background-image: url("../img/fly.gif");
 
 	}
 #content dl.label dt.key {
-	background-image: url(../img/key.gif);
+	background-image: url("../img/key.gif");
 
 	}
 #content dl.label dt.rec {
-	background-image: url(../img/rec.gif);
+	background-image: url("../img/rec.gif");
 	}	
 #content dl.label dt.fac {
-	background-image: url(../img/factory.gif);
+	background-image: url("../img/factory.gif");
 
 	}		
 #content dl.label dt.visa {
-	background-image: url(../img/visa.gif);
+	background-image: url("http://utilia.be/collection/scooterdesk/workspace/img/visa.gif");
 	
 	}
 #content dl.label dt.weight {
-	background-image: url(../img/weight.gif);
+	background-image: url("../img/weight.gif");
 
 	}		
 #content dl.label dt.size {
-	background-image: url(../img/size.gif);
+	background-image: url("../img/size.gif");
 	}
 
 #content dl.label dt.flower {
-	background-image: url(../img/flower.gif);
+	background-image: url("../img/flower.gif");
 	}
 	
 /******* Articles *******/
